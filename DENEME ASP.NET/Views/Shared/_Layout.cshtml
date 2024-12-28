@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ANKARA</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/DENEME_ASP.NET.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        footer {
+            background-color: #1560BD; 
+            flex-shrink: 0;
+            padding: 20px;
+            color: white; 
+        }
+
+        .main-content {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: #1A237E; color: black;">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow navbar-dark bg-primary top-bar">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/uploads/logo.png" width="128px" height="128px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-4 fw-bold text-dark fs-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/Ankara/TarihiYerler">Tarihi Yerler</a></li>
+                                <li><a class="dropdown-item" href="/Ankara/Müzeler">Müzeler</a></li>
+                                <li><a class="dropdown-item" href="/Ankara/KültürelYemekler">Kültürel Yemekler</a></li>
+                                <li><a class="dropdown-item" href="/Ankara/Ulaşım">Ulaşım</a></li>
+                                <li><a class="dropdown-item" href="/Ankara/Üniversiteler">Üniversiteler</a></li>
+                            </ul>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link h3 text-dark navbar-brand fs-2" asp-area="" asp-controller="Home" asp-action="Hakkimda">Hakkımda</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container ">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border footer">
+        <div class="container">
+            <br>
+            <p>
+                <a href="https://www.instagram.com/ahmet_tokerfaruk" target="_blank" style="color:white">
+                    <i class="bi bi-instagram" style="color:white"></i> ahmet_tokerfaruk
+            </p>
+            <p>
+                <a href="https://twitter.com/ahmetfaruktoke" target="_blank" style="color:white">
+                    <i class="bi bi-twitter" style="color:white"></i> ahmetfaruktoke
+            </p>
+            <p>
+                <a href="tel:+905444191575" style="color:white">
+                    <i class="bi bi-telephone" style="color:white"></i> 05444191575
+            </p>
+            <p>
+                <a href="mailto:ahmetfarukr@gmail.com" style="color:white">
+                    <i class="bi bi-envelope" style="color:white"></i> ahmetfarukr@gmail.com
+            </p>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
